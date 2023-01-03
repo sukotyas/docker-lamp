@@ -1,17 +1,12 @@
 # LAMP stack built with Docker Compose
 
-![Landing Page](https://user-images.githubusercontent.com/43859895/141092846-905eae39-0169-4fd7-911f-9ff32c48b7e8.png)
-
-A basic LAMP stack environment built using Docker Compose. It consists of the following:
-
+A minimum docker boilerplate for PHP-MySQL App modified from by https://github.com/sprintcube/docker-compose-lamp which consists of the following:
 - PHP
 - Apache
 - MySQL
 - phpMyAdmin
-- Redis
 
 As of now, we have several different PHP versions. Use appropriate php version as needed:
-
 - 5.4.x
 - 5.6.x
 - 7.1.x
@@ -28,7 +23,7 @@ As of now, we have several different PHP versions. Use appropriate php version a
 - Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
+git clone https://github.com/sukotyas/docker-lamp.git
 cd docker-compose-lamp/
 cp sample.env .env
 // modify sample.env as needed
@@ -231,10 +226,6 @@ Now, make a breakpoint and run debug.
 
 **Tip!** After theses configurations, you may need to restart container.
 
-## Redis
-
-It comes with Redis. It runs on default port `6379`.
-
 ## SSL (HTTPS)
 
 Support for `https` domains is built-in but disabled by default. There are 3 ways you can enable and configure SSL; `https` on `localhost` being the easiest. If you are trying to recreating a testing environment as close as possible to a production environment, any domain name can be supported with more configuration.
@@ -292,3 +283,5 @@ In Production you should modify at a minimum the following subjects:
 
 - php handler: mod_php=> php-fpm
 - secure mysql users with proper source IP limitations
+
+Big big thanks to: https://github.com/sprintcube/docker-compose-lamp
